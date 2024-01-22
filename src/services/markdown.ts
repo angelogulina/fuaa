@@ -26,14 +26,14 @@ export class MarkdownService implements PostDataService {
     const { data, content } = matter(fileContent)
     return {
       id: new Date(data.date).valueOf(),
-      author: data?.author,
+      author: data?.author || null,
       content: content.trim(),
-      date: new Date(data.date),
-      description: data?.description,
+      date: new Date(data.date).toDateString(),
+      description: data?.description || null,
       excerpt: data.excerpt,
       slug,
       title: data.title,
-      url: data?.url,
+      url: data?.url || null,
     } as Post
   }
 

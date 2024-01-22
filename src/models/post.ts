@@ -12,6 +12,6 @@ export class PostModel {
   }
 
   public getPostBySlug(slug: Post['slug']): Promise<PostResponse> {
-    return this.getPostBySlug(slug)
+    return this.service.getPostBySlug(slug)
   }
 }

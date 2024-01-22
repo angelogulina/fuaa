@@ -22,12 +22,12 @@ describe('MarkdownService', () => {
         id: new Date('2024-03-16T05:35:07.322Z').valueOf(),
         author: 'Angelo Gulina',
         content: 'The content of a mocked post',
-        date: new Date('2024-03-16T05:35:07.322Z'),
-        description: undefined,
+        date: 'Sat Mar 16 2024',
+        description: null,
         excerpt: 'The excerpt of a mocked post',
         slug: 'post',
         title: 'The title of a mocked post',
-        url: undefined,
+        url: null,
       })
     })
 
@@ -56,13 +56,13 @@ describe('MarkdownService', () => {
         {
           author: 'Angelo Gulina',
           content: 'The content of a mocked post',
-          date: new Date('2024-03-16T05:35:07.322Z'),
-          description: undefined,
+          date: 'Sat Mar 16 2024',
+          description: null,
           excerpt: 'The excerpt of a mocked post',
           id: new Date('2024-03-16T05:35:07.322Z').valueOf(),
           slug: 'file',
           title: 'The title of a mocked post',
-          url: undefined,
+          url: null,
         },
       ])
     })
@@ -74,13 +74,13 @@ describe('MarkdownService', () => {
         {
           author: 'Angelo Gulina',
           content: 'The content of a mocked post',
-          date: new Date('2024-03-16T05:35:07.322Z'),
-          description: undefined,
+          date: 'Sat Mar 16 2024',
+          description: null,
           excerpt: 'The excerpt of a mocked post',
           id: new Date('2024-03-16T05:35:07.322Z').valueOf(),
           slug: 'file',
           title: 'The title of a mocked post',
-          url: undefined,
+          url: null,
         },
       ])
     })
