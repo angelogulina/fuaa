@@ -13,9 +13,11 @@ describe('MarkdownService', () => {
   })
 
   describe('getPostBySlug', () => {
-    it('returns a well formatted post', () => {
+    beforeEach(() => {
       ;(<jest.Mock>readFileSync).mockReturnValue(postContent)
+    })
 
+    it('returns a well formatted post', () => {
       expect(service.getPostBySlug('post')).resolves.toEqual({
         id: new Date('2024-03-16T05:35:07.322Z').valueOf(),
         author: 'Angelo Gulina',
@@ -28,9 +30,25 @@ describe('MarkdownService', () => {
         url: undefined,
       })
     })
+
+    it('calls `readFileSync` with the correct arguments', () => {
+      service.getPostBySlug('post')
+
+      expect(readFileSync).toHaveBeenCalledWith('posts/post.md', 'utf8')
+    })
   })
 
   describe('getAvailablePosts', () => {
+    beforeEach(() => {
+      ;(<jest.Mock>readFileSync).mockReturnValue(postContent)
+    })
+
+    it('calls `readdirSync` with the correct arguments', () => {
+      service.getAvailablePosts()
+
+      expect(readdirSync).toHaveBeenCalledWith('./posts/')
+    })
+
     it('returns the correct paths', () => {
       ;(<jest.Mock>readdirSync).mockReturnValue(['file.md'])
 
@@ -42,7 +60,7 @@ describe('MarkdownService', () => {
           description: undefined,
           excerpt: 'The excerpt of a mocked post',
           id: new Date('2024-03-16T05:35:07.322Z').valueOf(),
-          slug: 'posts/file.md',
+          slug: 'file',
           title: 'The title of a mocked post',
           url: undefined,
         },
@@ -60,7 +78,7 @@ describe('MarkdownService', () => {
           description: undefined,
           excerpt: 'The excerpt of a mocked post',
           id: new Date('2024-03-16T05:35:07.322Z').valueOf(),
-          slug: 'posts/file.md',
+          slug: 'file',
           title: 'The title of a mocked post',
           url: undefined,
         },

@@ -4,7 +4,7 @@ import { join } from 'path'
 import { PostDataService } from '@/services/abstract'
 import { Post } from '@/typings/post'
 
-const markdownPostsDirectory = join(process.cwd(), '_posts')
+const markdownPostsDirectory = join(process.cwd(), './_posts')
 
 export class MarkdownService implements PostDataService {
   constructor(
@@ -12,17 +12,13 @@ export class MarkdownService implements PostDataService {
   ) {}
 
   private getPostSlugs() {
-    return fs.readdirSync(this.postsDirectory)
+    return (fs.readdirSync(this.postsDirectory) || [])
+      .filter((slug) => slug.match(/.md$/))
+      .map((slug) => slug.replace(/\.md$/, ''))
   }
 
   private getPostPath(slug: string) {
     return join(this.postsDirectory, slug)
-  }
-
-  private getAllPosts() {
-    return this.getPostSlugs()
-      .filter((slug) => slug.match(/.md$/))
-      .map((slug) => this.getPostPath(slug))
   }
 
   public async getPostBySlug(slug: string) {
@@ -42,6 +38,6 @@ export class MarkdownService implements PostDataService {
   }
 
   public async getAvailablePosts() {
-    return Promise.all(this.getAllPosts().map(this.getPostBySlug.bind(this)))
+    return Promise.all(this.getPostSlugs().map(this.getPostBySlug.bind(this)))
   }
 }
