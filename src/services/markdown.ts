@@ -2,7 +2,7 @@ import fs from 'fs'
 import matter from 'gray-matter'
 import { join } from 'path'
 import { PostDataService } from '@/services/abstract'
-import { Post } from '@/typings/post'
+import { PostData } from '@/typings/post'
 
 const markdownPostsDirectory = join(process.cwd(), './_posts')
 
@@ -11,7 +11,7 @@ export class MarkdownService implements PostDataService {
     private readonly postsDirectory: string = markdownPostsDirectory
   ) {}
 
-  private getPostSlugs() {
+  private getPostSlugs(): PostData['slug'][] {
     return (fs.readdirSync(this.postsDirectory) || [])
       .filter((slug) => slug.match(/.md$/))
       .map((slug) => slug.replace(/\.md$/, ''))
@@ -21,7 +21,7 @@ export class MarkdownService implements PostDataService {
     return join(this.postsDirectory, slug)
   }
 
-  public async getPostBySlug(slug: string) {
+  public async getPostBySlug(slug: string): Promise<PostData> {
     const fileContent = fs.readFileSync(this.getPostPath(`${slug}.md`), 'utf8')
     const { data, content } = matter(fileContent)
     return {
@@ -34,10 +34,10 @@ export class MarkdownService implements PostDataService {
       slug,
       title: data.title,
       url: data?.url || null,
-    } as Post
+    }
   }
 
-  public async getAvailablePosts() {
+  public async getAvailablePosts(): Promise<PostData[]> {
     return Promise.all(this.getPostSlugs().map(this.getPostBySlug.bind(this)))
   }
 }

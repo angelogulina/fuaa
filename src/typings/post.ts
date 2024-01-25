@@ -1,11 +1,12 @@
-export type PostResponse = Maybe<Post>
+export type PostResponse = Maybe<PostData>
 
-export interface Post {
+export interface PostData {
   id: number
   author: string
   content: string
-  date?: Date
+  date?: string
   description?: string
+  excerpt?: string
   slug: string
   title: string
   url?: string

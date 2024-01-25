@@ -1,6 +1,6 @@
-import { Post } from '@/typings/post'
+import { PostData } from '@/typings/post'
 
 export interface PostDataService {
-  getAvailablePosts(): Promise<Post[]>
-  getPostBySlug(slug: string): Promise<Post>
+  getAvailablePosts(): Promise<PostData[]>
+  getPostBySlug(slug: string): Promise<PostData>
 }
