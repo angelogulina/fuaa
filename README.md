@@ -1,4 +1,4 @@
-# fua | frequently used acronyms
+# fuaa | frequently used acronyms
 
 _Gli acronimi più frequentemente usati nello sviluppo software. And more._
 
@@ -18,14 +18,14 @@ Il sito permette di navigare in maniera semplice e intuitiva gli acronimi più f
 
 ### Come posso contribuire?
 
-Se trovi dei bug o degli aspetti che possono essere migliorati, puoi vedere [qui](https://github.com/angelogulina/fua/labels/bug) se qualcun'altra se n'è già accorta.
-Altrimenti [apri una Issue](https://github.com/angelogulina/fua/issues/new).
+Se trovi dei bug o degli aspetti che possono essere migliorati, puoi vedere [qui](https://github.com/angelogulina/fuaa/labels/bug) se qualcun'altra se n'è già accorta.
+Altrimenti [apri una Issue](https://github.com/angelogulina/fuaa/issues/new).
 
 Se trovi dei `bug` o `enhancement` che ritieni interessanti e vuoi contribuire allo sviluppo,
 per prima cosa clona la repository:
 
 ```bash
-git clone git@github.com:angelogulina/fua.git
+git clone git@github.com:angelogulina/fuaa.git
 ```
 
 Poi, nel terminale, puoi eseguire questi comandi:

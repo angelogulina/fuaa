@@ -12,7 +12,7 @@ export const PostRepository = (service = dataService) => {
   }
 
   const getPostBySlug = async (slug) => {
-    const data = await service.getPostBySlug(slug)
+    const data = await this.service.getPostBySlug(slug)
     return attachUrl(data)
   }
 

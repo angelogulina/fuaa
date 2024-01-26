@@ -12,8 +12,8 @@ export default function PostPage({ post }) {
   return (
     <>
       <Head>
-        <title>fua | frequently used acronyms</title>
-        <meta name="description" content="fua | frequently used acronyms" />
+        <title>fuaa | frequently used acronyms</title>
+        <meta name="description" content="fuaa | frequently used acronyms" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
       </Head>

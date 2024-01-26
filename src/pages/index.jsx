@@ -9,7 +9,7 @@ export default function Index({ posts }) {
   return (
     <>
       <Head>
-        <title>fua | frequently used acronyms</title>
+        <title>fuaa | frequently used acronyms</title>
         <meta name="description" content="fua | frequently used acronyms" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
