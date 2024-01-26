@@ -1,12 +1,11 @@
 import { readFileSync, readdirSync } from 'fs'
-import { PostDataService } from '@/services/abstract'
 import { MarkdownService } from '@/services/markdown'
 import { postContent } from '@/services/__tests__/post'
 
 jest.mock('fs')
 
 describe('MarkdownService', () => {
-  let service: PostDataService
+  let service
 
   beforeEach(() => {
     service = new MarkdownService('./posts/')
@@ -14,7 +13,7 @@ describe('MarkdownService', () => {
 
   describe('getPostBySlug', () => {
     beforeEach(() => {
-      ;(<jest.Mock>readFileSync).mockReturnValue(postContent)
+      readFileSync.mockReturnValue(postContent)
     })
 
     it('returns a well formatted post', () => {
@@ -40,7 +39,7 @@ describe('MarkdownService', () => {
 
   describe('getAvailablePosts', () => {
     beforeEach(() => {
-      ;(<jest.Mock>readFileSync).mockReturnValue(postContent)
+      readFileSync.mockReturnValue(postContent)
     })
 
     it('calls `readdirSync` with the correct arguments', () => {
@@ -50,7 +49,7 @@ describe('MarkdownService', () => {
     })
 
     it('returns the correct paths', () => {
-      ;(<jest.Mock>readdirSync).mockReturnValue(['file.md'])
+      readdirSync.mockReturnValue(['file.md'])
 
       expect(service.getAvailablePosts()).resolves.toEqual([
         {
@@ -68,7 +67,7 @@ describe('MarkdownService', () => {
     })
 
     it('correctly excludes non `.md` files', () => {
-      ;(<jest.Mock>readdirSync).mockReturnValue(['file.md', 'file.md.ts'])
+      readdirSync.mockReturnValue(['file.md', 'file.md.ts'])
 
       expect(service.getAvailablePosts()).resolves.toEqual([
         {
