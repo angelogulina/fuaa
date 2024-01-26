@@ -1,40 +1,58 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# fua | frequently used acronyms
 
-## Getting Started
+_Gli acronimi più frequentemente usati nello sviluppo software. And more._
 
-First, run the development server:
+Il sito è sviluppato in [Next.js](#cosa-è-nextjs). Nella repository sono presenti le configurazioni essenziali per lo [sviluppo locale](#come-posso-contribuire).
+
+---
+
+## L'idea
+
+### Perché?
+
+Le persone che si approcciano per la prima volta allo sviluppo software, sono spesso inondate di acronimi dati per scontato. Questo progetto colma il gap di conoscenze.
+
+### Come?
+
+Il sito permette di navigare in maniera semplice e intuitiva gli acronimi più frequentemente usati (_frequently used acronyms_).
+
+### Come posso contribuire?
+
+Se trovi dei bug o degli aspetti che possono essere migliorati, puoi vedere [qui](https://github.com/angelogulina/fua/labels/bug) se qualcun'altra se n'è già accorta.
+Altrimenti [apri una Issue](https://github.com/angelogulina/fua/issues/new).
+
+Se trovi dei `bug` o `enhancement` che ritieni interessanti e vuoi contribuire allo sviluppo,
+per prima cosa clona la repository:
 
 ```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
+git clone git@github.com:angelogulina/fua.git
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Poi, nel terminale, puoi eseguire questi comandi:
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+```bash
+npm install
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+npm run dev
+```
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+Accedi alla versione locale tramite: [http://localhost:8080](http://localhost:8080).
 
-This project uses [`next/font`](https://nextjs.org/docs/basic-features/font-optimization) to automatically optimize and load Inter, a custom Google Font.
+Poi crea un nuovo `branch` e apri una `Pull request` (se vuoi, taggando @angelogulina).
 
-## Learn More
+### Cosa è Next.js?
 
-To learn more about Next.js, take a look at the following resources:
+Puoi imparare di più su `Next.js` visitando questi siti:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+- [Next.js Documentation](https://nextjs.org/docs)
+- [Learn Next.js](https://nextjs.org/learn)
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Buona contribuzione 🎉
 
-## Deploy on Vercel
+## Il team
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- [Angelo Gulina](https://gitlab.com/agulina)
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+## License
+
+<a href="https://unlicense.org/"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/eb/PD-icon-black.svg/392px-PD-icon-black.svg.png?20170218184554" alt="Unlicense logo" width="40"/></a>
