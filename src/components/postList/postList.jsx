@@ -1,11 +1,12 @@
+import Post from '@/components/post'
 import styles from '@/components/postList/index.module.scss'
 
-const PostList = ({ posts, className }) => {
+const PostList = ({ className, posts }) => {
   return (
     <ul className={`${className} ${styles.List}`}>
       {posts.map((post) => (
         <li className={styles.Item} key={post.id}>
-          {post.title}
+          <Post title={post.title} />
         </li>
       ))}
     </ul>
