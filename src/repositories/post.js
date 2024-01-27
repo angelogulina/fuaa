@@ -15,6 +15,9 @@ export const PostRepository = (service = dataService) => {
     const data = await service.getPostBySlug(slug);
     return attachUrl(data);
   };
+    const data = await service.getPostBySlug(slug)
+    return attachUrl(data)
+  }
 
   return {
     getAllPosts,
