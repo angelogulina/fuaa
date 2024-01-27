@@ -1,6 +1,33 @@
+.Post {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 2rem;
+}
+
 .Title {
-    font-size: 40px;
-    font-style: italic;
-    font-weight: 700;
-    padding-top: 46px;
+  font-size: 40px;
+  font-style: italic;
+  font-weight: 700;
+}
+
+.btn {
+  padding: 10px 15px;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #111;
+  font-weight: 800;
+  background-color: #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.btn:hover {
+  background-color: bisque;
+}
+
+.toHome {
+  display: block;
+  margin-top: 1rem;
+  width: 120px;
 }

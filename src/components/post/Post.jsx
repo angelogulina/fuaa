@@ -1,12 +1,23 @@
-import styles from "@/components/post/index.module.scss";
 import Link from "next/link";
+import styles from "@/components/post/index.module.scss";
 
 const Post = ({ className, content, title }) => {
   return (
-    <Link href={`/posts/${title}`} className={className}>
+    <section className={`${className} ${styles.Post}`}>
       <h2 className={styles.Title}>{title}</h2>
-      {content && <div>{content}</div>}
-    </Link>
+      {content ? (
+        <div>
+          {content}{" "}
+          <Link className={`${styles.toHome} ${styles.btn}`} href={`/`}>
+            Back to home
+          </Link>
+        </div>
+      ) : (
+        <Link className={styles.btn} href={`posts/${title.toLowerCase()}`}>
+          Read more...
+        </Link>
+      )}
+    </section>
   );
 };
 

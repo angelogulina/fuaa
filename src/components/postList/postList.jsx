@@ -1,5 +1,6 @@
-import Post from '@/components/post'
-import styles from '@/components/postList/index.module.scss'
+import Post from "@/components/post";
+import styles from "@/components/postList/index.module.scss";
+import Link from "next/link";
 
 const PostList = ({ className, posts }) => {
   return (
@@ -10,7 +11,7 @@ const PostList = ({ className, posts }) => {
         </li>
       ))}
     </ul>
-  )
-}
+  );
+};
 
-export default PostList
+export default PostList;
