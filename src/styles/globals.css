@@ -7,3 +7,7 @@ body {
   color: var(--foreground-rgb);
   background: var(--background-rgb);
 }
+
+a {
+  text-decoration: none;
+}

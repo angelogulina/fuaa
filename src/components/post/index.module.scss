@@ -1,6 +1,11 @@
 .Title {
-    font-size: 40px;
-    font-style: italic;
-    font-weight: 700;
-    padding-top: 46px;
+  font-size: 2.5rem;
+  font-weight: 700;
+  font-size: 0.75rem;
+  color: rgb(8, 134, 117);
+  font-size: 1.25rem;
+  margin: 0.125rem;
+  &:hover {
+    color: aqua;
+  }
 }
