@@ -32,13 +32,15 @@ Poi, nel terminale, puoi eseguire questi comandi:
 
 ```bash
 npm install
+```
 
+```bash
 npm run dev
 ```
 
 Accedi alla versione locale tramite: [http://localhost:8080](http://localhost:8080).
 
-Poi crea un nuovo `branch` e apri una `Pull request` (se vuoi, taggando @angelogulina).
+Poi crea un nuovo `branch` e apri una `Pull request` (se vuoi, taggando `@angelogulina`).
 
 ### Cosa è Next.js?
 
