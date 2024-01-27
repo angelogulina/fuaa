@@ -1,4 +1,13 @@
 .List {
-    list-style: none;
-    padding-left: 26px;
+  list-style: none;
+  padding-left: 26px;
+
+  .Item {
+    /*
+  The width property is added to adjust the hover area 
+  which extends far beyond the text, ensuring a better 
+  user experience and precise interaction.
+*/
+    width: 5rem;
+  }
 }
