@@ -3,7 +3,7 @@ import Link from "next/link";
 
 const Post = ({ className, content, title }) => {
   return (
-    <Link href={`/${title}`} className={className}>
+    <Link href={`/posts/${title}`} className={className}>
       <h2 className={styles.Title}>{title}</h2>
       {content && <div>{content}</div>}
     </Link>
