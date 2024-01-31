@@ -1,9 +1,9 @@
 import styles from "@/components/post/index.module.scss";
 import Link from "next/link";
 
-const Post = ({ className, content, title }) => {
+const Post = ({ className, content, slug, title }) => {
   return (
-    <Link href={`/posts/${title}`} className={className}>
+    <Link href={`/posts/${slug}`} className={className}>
       <h2 className={styles.Title}>{title}</h2>
       {content && <div>{content}</div>}
     </Link>
